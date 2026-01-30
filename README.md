@@ -45,4 +45,4 @@ The platform is ready to be deployed on **Vercel**. Simply connect your GitHub r
 
 ---
 
-Built with ❤️ by Antigravity AI
+Built with ❤️ by CODE WITH VIVEK
