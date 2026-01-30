@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+ :root {
+  --background: 210 50% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --primary: 199 100% 50%; /* Electric Cyan */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 199 100% 50%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 199 100% 50%;
+  --radius: 1.25rem;
+}
+
+.dark {
+  --background: 224 71% 4%; /* Deep Charcoal Navy */
+  --foreground: 213 31% 91%;
+  --card: 224 71% 6%;
+  --card-foreground: 213 31% 91%;
+  --primary: 191 100% 50%; /* Neon Cyan Glow */
+  --primary-foreground: 222 47% 11%;
+  --secondary: 222 47% 11%;
+  --secondary-foreground: 213 31% 91%;
+  --muted: 222 47% 11%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 191 100% 50%;
+  --accent-foreground: 213 31% 91%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 213 31% 91%;
+  --border: 222 47% 12%;
+  --input: 222 47% 12%;
+  --ring: 191 100% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.glass-morphism {
+  @apply bg-white/70 dark:bg-black/60 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-2xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-cyan-300 dark:to-blue-400 font-black;
+}
+
+.ai-highlight {
+  @apply bg-rose-500/20 dark:bg-rose-500/30 text-rose-700 dark:text-rose-300 px-1 rounded-md border border-rose-500/30 font-semibold;
+}
+
+.human-highlight {
+  @apply bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 px-1 rounded-md border border-emerald-500/20;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
